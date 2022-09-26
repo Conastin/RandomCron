@@ -6,6 +6,8 @@
 ![Blank](https://img.shields.io/github/release-date/Conastin/RandomCron?style=plastic)
 ![Blank](https://img.shields.io/github/downloads/Conastin/RandomCron/total?style=plastic)
 
+简体中文 | [English](https://github.com/Conastin/RandomCron/blob/main/README_en_US.md)
+
 ## 他能做什么
 
 使用该脚本可以随机创建cron任务，解决原生cron只能固定时间运行的弊端，用于随机执行程序。
