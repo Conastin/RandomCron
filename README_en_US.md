@@ -6,7 +6,7 @@
 ![Blank](https://img.shields.io/github/release-date/Conastin/RandomCron?style=plastic)
 ![Blank](https://img.shields.io/github/downloads/Conastin/RandomCron/total?style=plastic)
 
-[简体中文](https://github.com/Conastin/RandomCron/blob/main/README.md)|English
+[简体中文](https://github.com/Conastin/RandomCron/blob/main/README.md) | English
 
 ## What can he do
 
