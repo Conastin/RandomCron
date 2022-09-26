@@ -46,7 +46,7 @@ mm=$(($RANDOM % 59 + 1))
 hh=$(($RANDOM % 16))
 # 构造随机cron任务
 RunCron="${mm} ${hh} * * * cd ${RunCronPathFormat}; ${RunCronPathFormat}${RunCronName} >> ${RunCronLogPathFormat}${RunCronLogName} 2>&1"
-echo "${RunCron}"
+echo "${mm} ${hh} * * * "
 # 判断是否存在cron任务
 if [ -z "$(grep ${RunCronPath}${RunCronName} ${CrontabPath})" ]; then
   # 向crontab文件中添加cron任务
@@ -54,9 +54,9 @@ if [ -z "$(grep ${RunCronPath}${RunCronName} ${CrontabPath})" ]; then
   echo "向crontab文件中添加run-cron任务成功"
 else
   # 删除原cron任务
-  $(sed -i "/${RunCronPathFormat}/d" ${CrontabPath})
+  $(sed -i "/${RunCronPathFormat}${RunCronName}/d" ${CrontabPath})
   echo "删除原run-cron任务成功"
   # 向crontab文件中添加cron任务
   $(sed -i '$a\'"${RunCron}" ${CrontabPath})
-  echo "向crontab文件中添加run-cron任务成功"
+  echo "更新run-cron任务成功"
 fi
